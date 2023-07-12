@@ -17,7 +17,9 @@ module.exports = {
       '2xl': '1536px',
     },
     extend: {},
+    darkSelector: '.dark-mode'
   },
+  darkMode: 'class',
   plugins: [],
 }
 
