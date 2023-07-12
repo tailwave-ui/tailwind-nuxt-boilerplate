@@ -5,6 +5,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 ## Already installed and configured
 - Tailwindcss ^3.3.2
 - sass: ^1.63.6
+- @nuxtjs/color-mode: ^3.3.0
 
 ... more soon!
 
