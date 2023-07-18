@@ -1,45 +1,64 @@
 <template>
+  <div  class="dark:bg-slate-900 bg-gray-50">
     <div>
-      <div class="bg-blue-400">
-        <svg v-if="colorMode.value == 'light'" @click="toggle"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="#fff"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-moon ml-4"
-                            ><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
-                            <svg v-else @click="toggle"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="#fff"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-sun text-white"
-                            ><circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg>
-                            
-      </div>
-      <div class="bg-gray-100">
-      <div class="bg-gray-500 dark:hover:bg-orange-500 h-24 w-24 rounded shadow">
-        <p class="text-gray-800 dark:text-white">Light Mode</p>
+      <modules-darkModeSwitcher/>
+    </div>
+    <div>
+    <div class="relative flex min-h-screen flex-col justify-center overflow-hidden py-6 sm:py-12">
+      <div class="relative bg-white dark:bg-slate-800 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 dark:ring-gray-700 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
+        <div class="mx-auto max-w-md">
+          <!-- <img src="/img/logo.svg" class="h-6 dark:text-white text-gray-600" alt="Tailwind Play" /> -->
+          <!-- logo -->
+            <div class="h-8 w-8 bg-contain bg-[url('../assets/svg/logo-dark.svg')] dark:bg-[url('../assets/svg/logo-light.svg')]" />
+          <!-- / logo -->
+          <div class="divide-y divide-gray-300/50">
+            <div class="space-y-6 py-8 text-base leading-7 text-gray-600 dark:text-white">
+              <p>An advanced online playground for Tailwind CSS, including support for things like:</p>
+              <ul class="space-y-4">
+                <li class="flex items-center">
+                  <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="11" />
+                    <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                  </svg>
+                  <p class="ml-4">
+                    Customizing your
+                    <code class="text-sm font-bold text-gray-900 dark:text-white">tailwind.config.js</code> file
+                  </p>
+                </li>
+                <li class="flex items-center">
+                  <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="11" />
+                    <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                  </svg>
+                  <p class="ml-4">
+                    Extracting classes with
+                    <code class="text-sm font-bold text-gray-900 dark:text-white">@apply</code>
+                  </p>
+                </li>
+                <li class="flex items-center">
+                  <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="11" />
+                    <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                  </svg>
+                  <p class="ml-4">Code completion with instant preview</p>
+                </li>
+              </ul>
+              <p>Perfect for learning how the framework works, prototyping a new idea, or creating a demo to share online.</p>
+            </div>
+            <div class="pt-8 text-base font-semibold leading-7">
+              <p class="text-gray-900 dark:text-white">Want to dig deeper into Tailwind?</p>
+              <p>
+                <a href="https://tailwindcss.com/docs" class="text-primary-light hover:text-primary-light">Read the docs &rarr;</a>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <NuxtWelcome />
     </div>
+  </div>
 </template>
 <script setup lang="ts">
-const colorMode = useColorMode()
-function toggle() {
-    colorMode.preference = colorMode.value == "light" ? "dark" : "light";
-}
 </script>
 <style lang="scss" scoped>
 </style>
