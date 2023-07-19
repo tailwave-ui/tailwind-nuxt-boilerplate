@@ -30,6 +30,11 @@ module.exports = {
           DEFAULT: '#EDF2F7',
           dark: '#CBD5E0',
         },
+        info: {
+          light: '#0C63E7',
+          DEFAULT: '#0C63E7',
+          dark: '#0C63E7',
+        },
         // Add more colors as needed
         gray: {
           50: "#FAFAFC",
