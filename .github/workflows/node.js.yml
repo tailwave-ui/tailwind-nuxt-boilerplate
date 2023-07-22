@@ -16,13 +16,14 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x, 18.x]
+        node-version: [16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+#       uses: actions/setup-node@v3
+      uses: appleboy/ssh-action@master
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
@@ -35,5 +36,6 @@ jobs:
           git pull origin main
           git status
           npm install --only=prod
-    - run: npm ci
-    - run: npm run generate --if-present
+          npm run generate
+#     - run: npm ci
+#     - run: npm run generate --if-present
