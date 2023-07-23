@@ -40,7 +40,7 @@ jobs:
           git status
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-          npm install --only=prod
+          npm ci
           npm run generate
 #     - run: npm ci
 #     - run: npm run generate --if-present
