@@ -34,7 +34,7 @@ jobs:
 #         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
         script: |
-          cd /home/tailwave/domains/boilerplate.tailwave.io/public_html/
+          cd ~/domains/boilerplate.tailwave.io/public_html
           git pull origin main
           git status
           npm install --only=prod
