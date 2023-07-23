@@ -35,6 +35,12 @@ jobs:
         port: 22
         script: |
           whoami
-          npm -v
+          cd ~/domains/boilerplate.tailwave.io/public_html
+          git pull origin main
+          git status
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+          npm install --only=prod
+          npm run generate
 #     - run: npm ci
 #     - run: npm run generate --if-present
