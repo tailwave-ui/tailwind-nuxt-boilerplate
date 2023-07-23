@@ -33,11 +33,6 @@ jobs:
         password: ${{ secrets.PASSWORD }}
 #         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
-        script: |
-          cd ~/domains/boilerplate.tailwave.io/public_html
-          git pull origin main
-          git status
-          npm install --only=prod
-          npm run generate
+        script: whoami
 #     - run: npm ci
 #     - run: npm run generate --if-present
