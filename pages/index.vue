@@ -9,7 +9,7 @@
         <div class="mx-auto max-w-md">
           <!-- <img src="/img/logo.svg" class="h-6 dark:text-white text-gray-600" alt="Tailwind Play" /> -->
           <!-- logo -->
-            <div class="h-8 w-8 bg-contain bg-[url('../assets/svg/logo-dark.svg')] dark:bg-[url('../assets/svg/logo-light.svg')]" />
+            <div class="h-8 w-8 bg-contain bg-[url('/svg/logo-dark.svg')] dark:bg-[url('/svg/logo-light.svg')]" />
           <!-- / logo -->
           <div class="divide-y divide-gray-300/50">
             <div class="space-y-6 py-8 text-base leading-7 text-gray-600 dark:text-white">
