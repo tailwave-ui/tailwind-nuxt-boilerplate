@@ -16,7 +16,18 @@ export default defineNuxtConfig({
         autoprefixer: {},
       },
     },
-  modules: ['@nuxtjs/color-mode'],
+  modules: [
+    '@nuxtjs/color-mode',
+    [
+      '@nuxtjs/i18n',
+      {
+        /* module options */
+        locales: ['en', 'fr'],
+        defaultLocale: 'en',
+        vueI18n: './i18n.config.ts'
+      }
+    ]
+  ],
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
     fallback: 'light', // fallback value if not system preference found
@@ -27,5 +38,5 @@ export default defineNuxtConfig({
     classSuffix: '',
     storageKey: 'nuxt-color-mode'
   },
-  devtools: { enabled: true }
+  devtools: { enabled: true },
 })
