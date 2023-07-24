@@ -42,5 +42,6 @@ jobs:
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
           npm ci
           npm run generate
+          rm -r node_modules/
 #     - run: npm ci
 #     - run: npm run generate --if-present
